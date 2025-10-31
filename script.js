@@ -282,28 +282,51 @@ function handleSubmit(event) {
     const button = form.querySelector('.btn-submit');
     const originalHTML = button.innerHTML;
     
-    // Simulate sending
+    // Show sending state
     button.innerHTML = '<span>SENDING...</span>';
     button.style.pointerEvents = 'none';
     
-    setTimeout(() => {
-        button.innerHTML = '<span>MESSAGE SENT!</span><span>✓</span>';
-        button.style.backgroundColor = '#0E4C92';
+    // Actually submit to Formspree
+    const formData = new FormData(form);
+    
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            // Success
+            button.innerHTML = '<span>MESSAGE SENT!</span><span>✓</span>';
+            button.style.backgroundColor = '#0E4C92';
+            
+            setTimeout(() => {
+                button.innerHTML = originalHTML;
+                button.style.backgroundColor = '';
+                button.style.pointerEvents = '';
+                form.reset();
+            }, 3000);
+        } else {
+            // Error from Formspree
+            return response.json().then(data => {
+                throw new Error(data.error || 'Failed to send message');
+            });
+        }
+    })
+    .catch(error => {
+        // Show error
+        console.error('Error:', error);
+        button.innerHTML = '<span>FAILED TO SEND</span><span>✗</span>';
+        button.style.backgroundColor = '#D32F2F';
         
         setTimeout(() => {
             button.innerHTML = originalHTML;
             button.style.backgroundColor = '';
             button.style.pointerEvents = '';
-            form.reset();
         }, 3000);
-    }, 2000);
-    
-    // Log form data (in production, send to server)
-    const formData = new FormData(form);
-    console.log('Form Data:');
-    for (let [key, value] of formData.entries()) {
-        console.log(`${key}: ${value}`);
-    }
+    });
 }
 
 // ==========================================
