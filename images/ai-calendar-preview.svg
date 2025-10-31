@@ -1,0 +1,22 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#222222"/>
+  <rect x="50" y="30" width="300" height="240" rx="10" fill="#0E4C92" stroke="#FF4F00" stroke-width="4"/>
+  <rect x="60" y="40" width="280" height="35" fill="#FF4F00"/>
+  <text x="200" y="63" font-family="Courier New" font-size="14" fill="white" text-anchor="middle" font-weight="bold">AI CALENDAR - OCTOBER 2025</text>
+  <g id="calendar-grid">
+    <rect x="70" y="90" width="35" height="30" fill="#D9D9D9" stroke="#222222" stroke-width="1"/>
+    <rect x="110" y="90" width="35" height="30" fill="#D9D9D9" stroke="#222222" stroke-width="1"/>
+    <rect x="150" y="90" width="35" height="30" fill="#FF4F00" stroke="#222222" stroke-width="1"/>
+    <rect x="190" y="90" width="35" height="30" fill="#D9D9D9" stroke="#222222" stroke-width="1"/>
+    <rect x="230" y="90" width="35" height="30" fill="#D9D9D9" stroke="#222222" stroke-width="1"/>
+    <rect x="270" y="90" width="35" height="30" fill="#D9D9D9" stroke="#222222" stroke-width="1"/>
+    <rect x="310" y="90" width="35" height="30" fill="#D9D9D9" stroke="#222222" stroke-width="1"/>
+    <rect x="70" y="125" width="35" height="30" fill="#D9D9D9" stroke="#222222" stroke-width="1"/>
+    <rect x="110" y="125" width="35" height="30" fill="#FF4F00" stroke="#222222" stroke-width="1"/>
+    <rect x="150" y="125" width="35" height="30" fill="#D9D9D9" stroke="#222222" stroke-width="1"/>
+  </g>
+  <rect x="70" y="180" width="260" height="30" rx="5" fill="white"/>
+  <text x="80" y="200" font-family="Courier New" font-size="11" fill="#222222">"Schedule meeting Friday 3pm"</text>
+  <circle cx="200" cy="235" r="20" fill="#FF4F00"/>
+  <text x="200" y="243" font-family="Courier New" font-size="18" fill="white" text-anchor="middle" font-weight="bold">AI</text>
+</svg>

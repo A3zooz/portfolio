@@ -1,0 +1,39 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#222222"/>
+  
+  <!-- Calendar Grid -->
+  <g transform="translate(110, 80)">
+    <!-- Calendar Border -->
+    <rect x="0" y="0" width="180" height="140" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+    
+    <!-- Calendar Header -->
+    <rect x="0" y="0" width="180" height="25" fill="#0E4C92"/>
+    <text x="90" y="17" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">SCHEDULE</text>
+    
+    <!-- Grid Lines -->
+    <line x1="0" y1="45" x2="180" y2="45" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="0" y1="70" x2="180" y2="70" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="0" y1="95" x2="180" y2="95" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="0" y1="120" x2="180" y2="120" stroke="#FFFFFF" stroke-width="1"/>
+    
+    <line x1="45" y1="25" x2="45" y2="140" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="90" y1="25" x2="90" y2="140" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="135" y1="25" x2="135" y2="140" stroke="#FFFFFF" stroke-width="1"/>
+    
+    <!-- Scheduled Items -->
+    <rect x="5" y="30" width="35" height="12" fill="#FF4F00"/>
+    <rect x="50" y="52" width="35" height="12" fill="#FF4F00"/>
+    <rect x="140" y="75" width="35" height="12" fill="#FF4F00"/>
+    <rect x="95" y="98" width="35" height="12" fill="#FF4F00"/>
+    <rect x="5" y="125" width="35" height="12" fill="#FF4F00"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="40" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#FF4F00" text-anchor="middle">DEFENSE SCHEDULING</text>
+  <text x="200" y="60" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Genetic Algorithm • Django • React</text>
+  
+  <!-- Bottom Label -->
+  <rect x="130" y="245" width="140" height="20" fill="#0E4C92"/>
+  <text x="200" y="259" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">AI OPTIMIZATION</text>
+</svg>

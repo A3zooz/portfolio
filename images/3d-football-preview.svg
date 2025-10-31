@@ -1,0 +1,28 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#222222"/>
+  
+  <!-- Football field -->
+  <rect x="50" y="100" width="300" height="150" fill="#0E4C92" stroke="#FFFFFF" stroke-width="3"/>
+  
+  <!-- Goal -->
+  <rect x="150" y="80" width="100" height="20" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+  <line x1="150" y1="80" x2="150" y2="100" stroke="#FFFFFF" stroke-width="3"/>
+  <line x1="250" y1="80" x2="250" y2="100" stroke="#FFFFFF" stroke-width="3"/>
+  
+  <!-- Football -->
+  <circle cx="200" cy="200" r="20" fill="#FFFFFF" stroke="#222222" stroke-width="2"/>
+  <path d="M 185 200 L 195 195 L 205 195 L 215 200 L 205 205 L 195 205 Z" fill="#222222"/>
+  
+  <!-- 3D Effect Lines -->
+  <line x1="100" y1="150" x2="300" y2="150" stroke="#FF4F00" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="100" y1="200" x2="300" y2="200" stroke="#FF4F00" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Title -->
+  <text x="200" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FF4F00" text-anchor="middle">3D FOOTBALL</text>
+  <text x="200" y="65" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">OpenGL • C++ • 3D Graphics</text>
+  
+  <!-- Bottom Label -->
+  <rect x="150" y="270" width="100" height="20" fill="#FF4F00"/>
+  <text x="200" y="284" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">GAME DEV</text>
+</svg>
