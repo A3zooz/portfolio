@@ -275,7 +275,7 @@ themeToggle.addEventListener('click', () => {
 // ==========================================
 // FORM SUBMISSION
 // ==========================================
-function handleSubmit(event) {
+async function handleSubmit(event) {
     event.preventDefault();
     
     const form = event.target;
@@ -285,18 +285,21 @@ function handleSubmit(event) {
     // Show sending state
     button.innerHTML = '<span>SENDING...</span>';
     button.style.pointerEvents = 'none';
+    button.disabled = true;
     
-    // Actually submit to Formspree
-    const formData = new FormData(form);
-    
-    fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
-        }
-    })
-    .then(response => {
+    try {
+        const formData = new FormData(form);
+        
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        
+        const data = await response.json();
+        
         if (response.ok) {
             // Success
             button.innerHTML = '<span>MESSAGE SENT!</span><span>✓</span>';
@@ -306,18 +309,16 @@ function handleSubmit(event) {
                 button.innerHTML = originalHTML;
                 button.style.backgroundColor = '';
                 button.style.pointerEvents = '';
+                button.disabled = false;
                 form.reset();
             }, 3000);
         } else {
             // Error from Formspree
-            return response.json().then(data => {
-                throw new Error(data.error || 'Failed to send message');
-            });
+            throw new Error(data.error || 'Failed to send message');
         }
-    })
-    .catch(error => {
+    } catch (error) {
         // Show error
-        console.error('Error:', error);
+        console.error('Form submission error:', error);
         button.innerHTML = '<span>FAILED TO SEND</span><span>✗</span>';
         button.style.backgroundColor = '#D32F2F';
         
@@ -325,8 +326,9 @@ function handleSubmit(event) {
             button.innerHTML = originalHTML;
             button.style.backgroundColor = '';
             button.style.pointerEvents = '';
+            button.disabled = false;
         }, 3000);
-    });
+    }
 }
 
 // ==========================================
@@ -514,6 +516,13 @@ console.log('%c💡 Feel free to explore the code!', 'color: #222222; font-size:
 // KEYBOARD SHORTCUTS
 // ==========================================
 document.addEventListener('keydown', (e) => {
+    // Don't trigger shortcuts if user is typing in an input or textarea
+    const isTyping = e.target.tagName === 'INPUT' || 
+                     e.target.tagName === 'TEXTAREA' || 
+                     e.target.isContentEditable;
+    
+    if (isTyping) return;
+    
     // Press 'H' to go home
     if (e.key === 'h' || e.key === 'H') {
         window.scrollTo({ top: 0, behavior: 'smooth' });
