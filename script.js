@@ -310,43 +310,13 @@ function handleSubmit(event) {
 // DOWNLOAD RESUME
 // ==========================================
 function downloadResume() {
-    // Create a simple text resume
-    const resumeText = `
-AHMED AZOOZ
-Software Engineer
-Email: ahmed.mohammed.azzooz@gmail.com
-Phone: +20 111 332 1344
-Location: New Cairo, Egypt
-LinkedIn: https://www.linkedin.com/in/ahmed-azoozz/
-GitHub: https://github.com/A3zooz/
-
-EDUCATION
-BSc. Computer Science & Engineering
-The German University in Cairo (2019-2024)
-GPA: 3.97 | High Honors | 70% Scholarship
-
-EXPERIENCE
-- Software Engineer Intern at Janan Tech (Oct 2025 - Present)
-- Fullstack Engineer Intern at Qupil (Apr 2025 - Jun 2025)
-- Software Engineer Intern at GUC (Aug 2022 - Apr 2023)
-
-SKILLS
-Languages: JavaScript/TypeScript, Python, Java
-Frameworks: React, React Native, NestJS, Express, Spring Boot
-Tools: Docker, MongoDB, PostgreSQL, Git, TensorFlow
-
-Visit my portfolio for more details!
-    `;
-    
-    const blob = new Blob([resumeText], { type: 'text/plain' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'Ahmed_Azooz_Resume.txt';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    window.URL.revokeObjectURL(url);
+    // Download the PDF resume
+    const link = document.createElement('a');
+    link.href = 'Ahmed_Azooz_CV.pdf';
+    link.download = 'Ahmed_Azooz_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 }
 
 // ==========================================
