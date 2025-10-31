@@ -140,10 +140,10 @@ function animateOnScroll() {
     
     elements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150;
+        const elementVisible = 100;
         
         if (elementTop < window.innerHeight - elementVisible) {
-            const delay = element.getAttribute('data-delay') || 0;
+            const delay = element.getAttribute('data-delay') ? parseInt(element.getAttribute('data-delay')) / 2 : 0;
             setTimeout(() => {
                 element.classList.add('aos-animate');
             }, delay);
@@ -151,7 +151,14 @@ function animateOnScroll() {
     });
 }
 
-window.addEventListener('scroll', animateOnScroll);
+// Use requestAnimationFrame for smoother performance
+let scrollTimeout;
+window.addEventListener('scroll', () => {
+    if (scrollTimeout) {
+        window.cancelAnimationFrame(scrollTimeout);
+    }
+    scrollTimeout = window.requestAnimationFrame(animateOnScroll);
+});
 window.addEventListener('load', animateOnScroll);
 
 // ==========================================
@@ -217,11 +224,33 @@ document.head.appendChild(style);
 // NAVIGATION LINK EFFECTS
 // ==========================================
 const navLinks = document.querySelectorAll('.nav-link');
+const hamburger = document.getElementById('hamburger');
+const navLinksContainer = document.getElementById('navLinks');
+
+// Hamburger menu toggle
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinksContainer.classList.toggle('active');
+    
+    // Prevent body scroll when menu is open
+    if (navLinksContainer.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
+});
 
 navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
+        
+        // Close mobile menu
+        hamburger.classList.remove('active');
+        navLinksContainer.classList.remove('active');
+        document.body.style.overflow = '';
+        
+        // Scroll to section
         scrollToSection(targetId);
         
         // Visual feedback
@@ -230,6 +259,17 @@ navLinks.forEach(link => {
             this.style.transform = '';
         }, 300);
     });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navLinksContainer.contains(e.target) && 
+        !hamburger.contains(e.target) && 
+        navLinksContainer.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        navLinksContainer.classList.remove('active');
+        document.body.style.overflow = '';
+    }
 });
 
 // ==========================================
@@ -455,7 +495,8 @@ function animateStatBoxes() {
         const elementTop = box.getBoundingClientRect().top;
         
         if (elementTop < window.innerHeight - 100) {
-            box.style.animation = 'pulse 2s ease infinite';
+            // Just trigger visibility, CSS handles the animation
+            box.style.visibility = 'visible';
         }
     });
 }
