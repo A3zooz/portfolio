@@ -775,6 +775,8 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    max-width: 450px;
+    margin: 0 auto;
 }
 
 .project-card:hover {
@@ -1457,7 +1459,7 @@ body {
 
     .project-card {
         margin: 0 auto;
-        max-width: 400px;
+        min-width: auto;
     }
 
     .skills-grid {
