@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Azooz - Software Engineer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Cursor Trail -->
+    <canvas id="cursorCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav-brutalist">
+        <div class="nav-container">
+            <div class="logo" id="logo">AHMED_AZOOZ</div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link" data-text="ABOUT">ABOUT</a>
+                <a href="#experience" class="nav-link" data-text="EXPERIENCE">EXPERIENCE</a>
+                <a href="#projects" class="nav-link" data-text="PROJECTS">PROJECTS</a>
+                <a href="#skills" class="nav-link" data-text="SKILLS">SKILLS</a>
+                <a href="#contact" class="nav-link" data-text="CONTACT">CONTACT</a>
+            </div>
+            <div class="theme-toggle" id="themeToggle">
+                <span class="toggle-icon">◐</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="matrix-bg" id="matrixBg"></div>
+        <div class="hero-content">
+            <div class="glitch-container">
+                <h1 class="hero-title" data-text="AHMED AZOOZ">AHMED AZOOZ</h1>
+            </div>
+            <div class="terminal-text">
+                <span class="prompt">$</span>
+                <span id="typedText" class="typed-text"></span>
+                <span class="cursor-blink">_</span>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-box" data-aos="fade-up">
+                    <div class="stat-value">3.97</div>
+                    <div class="stat-label">GPA</div>
+                </div>
+                <div onclick="scrollToSection('projects')" class="stat-box" data-aos="fade-up" data-delay="100">
+                    <div class="stat-value">12</div>
+                    <div class="stat-label">PROJECTS</div>
+                </div>
+                <div class="stat-box" data-aos="fade-up" data-delay="200">
+                    <div class="stat-value">1+</div>
+                    <div class="stat-label">YRS OF EXPERIENCE</div>
+                </div>
+                <div class="stat-box" data-aos="fade-up" data-delay="300" onclick="window.open('https://leetcode.com/u/A3zooz/', '_blank')" style="cursor: pointer;">
+                    <div class="stat-value">300</div>
+                    <div class="stat-label">PROBLEMS SOLVED ON LEETCODE</div>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <button class="btn-primary" onclick="scrollToSection('projects')">
+                    <span>EXPLORE WORK</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+        </div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-about">
+        <div class="container">
+            <h2 class="section-title" data-aos="slide-right">
+                <span class="title-bracket">[</span>ABOUT_ME<span class="title-bracket">]</span>
+            </h2>
+            <div class="about-grid">
+                <div class="about-card interactive-card" data-aos="fade-up">
+                    <div class="card-header">
+                        <span class="header-icon">●</span> PROFILE
+                    </div>
+                    <div class="card-content">
+                        <p>Full-stack engineer specializing in modern web technologies. 
+                        Graduate of The German University in Cairo with <strong>3.97 GPA</strong> (High Honors). 
+                        I build scalable, performance-driven applications using various technologies including <strong>React, Node.js, MongoDB, PostgreSQL</strong> 
+                        and AI integrations.</p>
+                    </div>
+                </div>
+                <div class="about-card interactive-card" data-aos="fade-up" data-delay="100">
+                    <div class="card-header">
+                        <span class="header-icon">●</span> EDUCATION
+                    </div>
+                    <div class="card-content">
+                        <h4 class="edu-title">BSc. Computer Science & Engineering</h4>
+                        <p class="edu-subtitle">The German University in Cairo</p>
+                        <p class="edu-date">2019 - 2024</p>
+                        <div class="achievement-tag">GPA: 3.97 (American) / 1.03 (German)</div>
+                        <div class="achievement-tag">High Honors Graduate</div>
+                        <div class="achievement-tag">Partial Scholarship</div>
+                        <div class="achievement-tag">Thesis: Grade A+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-experience">
+        <div class="container">
+            <h2 class="section-title" data-aos="slide-right">
+                <span class="title-bracket">[</span>EXPERIENCE<span class="title-bracket">]</span>
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Engineer Intern</h3>
+                            <span class="timeline-date">OCT 2025 - PRESENT</span>
+                        </div>
+                        <div class="timeline-company">Janan Tech • Remote</div>
+                        <ul class="timeline-points">
+                            <li>Deployed <strong>OpenReplay, n8n, Mattermost, Matomo and Rocket.Chat</strong> with Docker, Nginx & HTTPS.</li>
+                            <li>Built Remix landing page with <strong>i18n</strong> support (EN/AR/DE) with <strong>Matomo and OpenReplay</strong> integration for tracking</li>
+                            <li>Integrate <strong>Formspree</strong> with landing page for form handling</li>
+                        </ul>
+                        <div class="tech-pills">
+                            <span>Docker</span>
+                            <span>Nginx</span>
+                            <span>React Remix</span>
+                            <span>Linux</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left" data-delay="100">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Fullstack Engineer Intern</h3>
+                            <span class="timeline-date">APR 2025 - JUN 2025</span>
+                        </div>
+                        <div class="timeline-company">Qupil • Remote</div>
+                        <ul class="timeline-points">
+                            <li>Ramped up quickly delivering features within <strong>2 months</strong> using NestJS, React Native, MongoDB</li>
+                            <li>Revamped lesson creation with <strong>5 new lesson types</strong>, ramping up sales by <strong>2-3x</strong></li>
+                            <li>Upgraded Stripe from v8 to v18 adding <strong>Apple Pay & Google Pay</strong> support</li>
+                            <li>Fixed critical payment & login bugs blocking user access</li>
+                            <li>Built <strong>voice recognition</strong> feature for accessibility</li>
+                            <li>Implemented topic-based search and monetization paywall</li>
+                            <li>Used <strong>Git</strong> for version control, managing feature branches and pull requests</li>
+                        </ul>
+                        <div class="tech-pills">
+                            <span>NestJS</span>
+                            <span>React Native</span>
+                            <span>MongoDB</span>
+                            <span>Stripe</span>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left" data-delay="200">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Engineer Intern</h3>
+                            <span class="timeline-date">AUG 2022 - APR 2023</span>
+                        </div>
+                        <div class="timeline-company">The German University in Cairo • New Cairo, Egypt</div>
+                        <ul class="timeline-points">
+                            <li>Led team of <strong>5 developers</strong> in designing Python-based scheduling algorithms</li>
+                            <li>Cut defense scheduling from <strong>2 weeks to 5 hours</strong> using Genetic Algorithm</li>
+                            <li>Scheduled <strong>600 students</strong> thesis defenses optimizing faculty availability</li>
+                            <li>Developed robust logic handling dynamic constraints (time slots, examiners, preferences)</li>
+                            <li>Conducted team planning sessions and extensive testing for reliability</li>
+                        </ul>
+                        <div class="tech-pills">
+                            <span>Python</span>
+                            <span>Genetic Algorithms</span>
+                            <span>Team Leadership</span>
+                            <span>Optimization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="slide-right">
+                <span class="title-bracket">[</span>PROJECTS<span class="title-bracket">]</span>
+            </h2>
+            
+            <!-- Project Filter -->
+            <div class="project-filter" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+                <button class="filter-btn" data-filter="fullstack">FULLSTACK</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="mobile">MOBILE</button>
+                <button class="filter-btn" data-filter="games">GAMES</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card" data-category="mobile" data-aos="zoom-in">
+                    <div class="project-number">01</div>
+                    <div class="project-image-placeholder">
+                        <img src="images/spokenhabit.gif" alt="Spoken Habit Preview" class="project-preview-img">
+                    </div>
+                    <h3 class="project-title">SPOKEN HABIT</h3>
+                    <p class="project-desc">Voice-powered habit tracker with hands-free management using LLMs</p>
+                    <div class="project-tags">
+                        <span class="tag">React Native</span>
+                        <span class="tag">Supabase</span>
+                        <span class="tag">LLM</span>
+                        <span class="tag">Expo</span>
+                        <span class="tag">Expo router</span>
+                        <span class="tag">Voice Recognition</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/spoken-habit.html" class="project-link">
+                            <span>VIEW DETAILS</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                        <a href="https://github.com/A3zooz/spoken-habit" target="_blank" class="project-link" style="margin-top: 10px;">
+                            <span>GITHUB</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fullstack" data-aos="zoom-in" data-delay="100">
+                    <div class="project-number">02</div>
+                    <div class="project-image-placeholder">
+                        <img src="images/reverse-proxy-preview.svg" alt="Reverse Proxy Preview" class="project-preview-img">
+                    </div>
+                    <h3 class="project-title">REVERSE PROXY</h3>
+                    <p class="project-desc">Secure Express.js proxy with weighted load balancing, JWT auth & rate limiting</p>
+                    <div class="project-tags">
+                        <span class="tag">Express.js</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">JWT</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/reverse-proxy.html" class="project-link">
+                            <span>VIEW DETAILS</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                        <a href="https://github.com/A3zooz/reverse-proxy" target="_blank" class="project-link" style="margin-top: 10px;">
+                            <span>GITHUB</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fullstack" data-aos="zoom-in" data-delay="200">
+                    <div class="project-number">03</div>
+                    <div class="project-image-placeholder">
+                        <img src="images/elearning.png" alt="E-Learning Platform Preview" class="project-preview-img">
+                    </div>
+                    <h3 class="project-title">E-LEARNING PLATFORM</h3>
+                    <p class="project-desc">MERN stack course platform with progress tracking & certificate generation</p>
+                    <div class="project-tags">
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Express</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/e-learning.html" class="project-link">
+                            <span>VIEW DETAILS</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                        <a href="https://github.com/Advanced-Computer-Lab-2022/Agiles" target="_blank" class="project-link" style="margin-top: 10px;">
+                            <span>GITHUB</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ai" data-aos="zoom-in">
+                    <div class="project-number">04</div>
+                    <div class="project-image-placeholder">
+                        <img src="images/ai-calendar-preview.svg" alt="AI Calendar Preview" class="project-preview-img">
+                    </div>
+                    <h3 class="project-title">AI CALENDAR</h3>
+                    <p class="project-desc">Intelligent scheduling with NLP for tutor availability management</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Express.js</span>
+                        <span class="tag">Together.ai</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/ai-calendar.html" class="project-link">
+                            <span>VIEW DETAILS</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                        <a href="https://github.com/A3zooz/AICalendar" target="_blank" class="project-link" style="margin-top: 10px;">
+                            <span>GITHUB</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fullstack" data-aos="zoom-in" data-delay="100">
+                    <div class="project-number">05</div>
+                    <div class="project-image-placeholder">
+                        <img src="images/task-manager-preview.svg" alt="Task Manager Preview" class="project-preview-img">
+                    </div>
+                    <h3 class="project-title">TASK MANAGER</h3>
+                    <p class="project-desc">Spring Boot web app with PostgreSQL, JPA & Docker containerization</p>
+                    <div class="project-tags">
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/task-manager.html" class="project-link">
+                            <span>VIEW DETAILS</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                        <a href="https://github.com/A3zooz" target="_blank" class="project-link" style="margin-top: 10px;">
+                            <span>GITHUB</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ai" data-aos="zoom-in" data-delay="200">
+                    <div class="project-number">06</div>
+                    <div class="project-image-placeholder">
+                        <img src="images/denoising.png" alt="Image Denoising Preview" class="project-preview-img">
+                    </div>
+                    <h3 class="project-title">IMAGE DENOISING</h3>
+                    <p class="project-desc">Bachelor Thesis (Grade A+): Deep learning autoencoder outperforming BM3D</p>
+                    <div class="project-tags">
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">Keras</span>
+                        <span class="tag">Python</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/image-denoising.html" class="project-link">
+                            <span>VIEW DETAILS</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                        <a href="https://github.com/A3zooz" target="_blank" class="project-link" style="margin-top: 10px;">
+                            <span>KAGGLE</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fullstack" data-aos="zoom-in">
+                    <div class="project-number">07</div>
+                    <div class="project-image-placeholder">
+                        <img src="images/conquerer.png" alt="City Conquest Game Preview" class="project-preview-img">
+                    </div>
+                    <h3 class="project-title">CITY CONQUERING GAME</h3>
+                    <p class="project-desc">Turn-based strategy game with city management and world conquest mechanics</p>
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Java Swing</span>
+                        <span class="tag">OOP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/city-conquest-game.html" class="project-link">
+                            <span>VIEW DETAILS</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                        <a href="https://github.com/A3zooz/Game" target="_blank" class="project-link" style="margin-top: 10px;">
+                            <span>GITHUB</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fullstack" data-aos="zoom-in" data-delay="100">
+                    <div class="project-number">08</div>
+                    <div class="project-image-placeholder">
+                        <img src="images/compiler-simulation-preview.svg" alt="Compiler Simulation Preview" class="project-preview-img">
+                    </div>
+                    <h3 class="project-title">COMPILER SIMULATION</h3>
+                    <p class="project-desc">Java implementation of compiler concepts: NFA/DFA, parsing, and grammar transformations</p>
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Algorithms</span>
+                        <span class="tag">Compiler Theory</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/compiler-simulation.html" class="project-link">
+                            <span>VIEW DETAILS</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                        <a href="https://github.com/A3zooz" target="_blank" class="project-link" style="margin-top: 10px;">
+                            <span>GITHUB</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ai" data-aos="zoom-in" data-delay="200">
+                    <div class="project-number">09</div>
+                    <div class="project-image-placeholder">
+                        <img src="images/defense-scheduling-preview.svg" alt="Defense Scheduling Preview" class="project-preview-img">
+                    </div>
+                    <h3 class="project-title">DEFENSE SCHEDULING</h3>
+                    <p class="project-desc">Genetic algorithm system for scheduling 600+ bachelor thesis defenses</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Algorithms</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/defense-scheduling.html" class="project-link">
+                            <span>VIEW DETAILS</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                        <a href="https://github.com/A3zooz/Bachelor-Defense-System" target="_blank" class="project-link" style="margin-top: 10px;">
+                            <span>GITHUB</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="games" data-aos="zoom-in">
+                    <div class="project-number">10</div>
+                    <div class="project-image-placeholder">
+                        <img src="images/whatisthis.png" alt="Unity Runner Preview" class="project-preview-img">
+                    </div>
+                    <h3 class="project-title">WHAT IS THIS GAME</h3>
+                    <p class="project-desc">Endless runner game inspired by Subway Surfers, built with Unity</p>
+                    <div class="project-tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">Game Dev</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/unity-runner.html" class="project-link">
+                            <span>VIEW DETAILS</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                        <a href="https://github.com/A3zooz/WhatisthisGame" target="_blank" class="project-link" style="margin-top: 10px;">
+                            <span>GITHUB</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="games" data-aos="zoom-in" data-delay="100">
+                    <div class="project-number">11</div>
+                    <div class="project-image-placeholder">
+                        <img src="images/football.png" alt="3D Football Preview" class="project-preview-img">
+                    </div>
+                    <h3 class="project-title">3D FOOTBALL PENALTY</h3>
+                    <p class="project-desc">Real-time 3D football game built from scratch with C++ and OpenGL</p>
+                    <div class="project-tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">OpenGL</span>
+                        <span class="tag">3D Graphics</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/3d-football.html" class="project-link">
+                            <span>VIEW DETAILS</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                        <a href="https://github.com/A3zooz/football" target="_blank" class="project-link" style="margin-top: 10px;">
+                            <span>GITHUB</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="games" data-aos="zoom-in" data-delay="200">
+                    <div class="project-number">12</div>
+                    <div class="project-image-placeholder">
+                        <img src="images/spaceinvaders.gif" alt="Space Invaders Preview" class="project-preview-img">
+                    </div>
+                    <h3 class="project-title">SPACE INVADERS</h3>
+                    <p class="project-desc">Classic arcade game reimplemented using OpenGL 2D graphics</p>
+                    <div class="project-tags">
+                        <span class="tag">OpenGL</span>
+                        <span class="tag">C/C++</span>
+                        <span class="tag">Retro Gaming</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/space-invaders.html" class="project-link">
+                            <span>VIEW DETAILS</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                        <a href="https://github.com/A3zooz/space-invaders" target="_blank" class="project-link" style="margin-top: 10px;">
+                            <span>GITHUB</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="slide-right">
+                <span class="title-bracket">[</span>SKILLS<span class="title-bracket">]</span>
+            </h2>
+            
+            <div class="skills-grid">
+                <!-- Technical Skills -->
+                <div class="skill-category" data-aos="fade-up">
+                    <h3 class="category-title">
+                        <span class="category-icon">▸</span> TECHNICAL SKILLS
+                    </h3>
+                    
+                    <div class="tech-subsection">
+                        <h4 class="subsection-title">Languages & Frameworks</h4>
+                        <div class="skill-badges">
+                            <div class="badge-item">JavaScript</div>
+                            <div class="badge-item">TypeScript</div>
+                            <div class="badge-item">Python</div>
+                            <div class="badge-item">Java</div>
+                            <div class="badge-item">C++</div>
+                            <div class="badge-item">C</div>
+                            <div class="badge-item">C#</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-subsection">
+                        <h4 class="subsection-title">Backend & APIs</h4>
+                        <div class="skill-badges">
+                            <div class="badge-item">NestJS</div>
+                            <div class="badge-item">Express.js</div>
+                            <div class="badge-item">Node.js</div>
+                            <div class="badge-item">Spring Boot</div>
+                            <!-- <div class="badge-item">Django</div> -->
+                            <div class="badge-item">REST APIs</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-subsection">
+                        <h4 class="subsection-title">Frontend & Mobile</h4>
+                        <div class="skill-badges">
+                            <div class="badge-item">React</div>
+                            <div class="badge-item">React Native</div>
+                            <div class="badge-item">Expo</div>
+                            <div class="badge-item">HTML5</div>
+                            <div class="badge-item">CSS3</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-subsection">
+                        <h4 class="subsection-title">Databases</h4>
+                        <div class="skill-badges">
+                            <div class="badge-item">MongoDB</div>
+                            <div class="badge-item">PostgreSQL</div>
+                            <div class="badge-item">Supabase</div>
+                            <div class="badge-item">SQLite</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-subsection">
+                        <h4 class="subsection-title">DevOps & Tools</h4>
+                        <div class="skill-badges">
+                            <div class="badge-item">Docker</div>
+                            <div class="badge-item">Git</div>
+                            <div class="badge-item">GitHub</div>
+                            <div class="badge-item">Linux</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-subsection">
+                        <h4 class="subsection-title">AI/ML & Graphics</h4>
+                        <div class="skill-badges">
+                            <div class="badge-item">TensorFlow</div>
+                            <div class="badge-item">Keras</div>
+                            <div class="badge-item">OpenGL</div>
+                            <div class="badge-item">Unity</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-subsection">
+                        <h4 class="subsection-title">Hardware & Embedded</h4>
+                        <div class="skill-badges">
+                            <div class="badge-item">Arduino</div>
+                            <div class="badge-item">FPGA</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-category" data-aos="fade-up" data-delay="100">
+                    <h3 class="category-title">
+                        <span class="category-icon">▸</span> SOFT SKILLS
+                    </h3>
+                    <div class="skill-badges soft-skills-badges">
+                        <div class="badge-item">Problem-Solving</div>
+                        <div class="badge-item">Communication</div>
+                        <div class="badge-item">Teamwork</div>
+                        <div class="badge-item">Adaptability</div>
+                        <div class="badge-item">Critical Thinking</div>
+                        <div class="badge-item">Leadership</div>
+                        <div class="badge-item">Time Management</div>
+                        <div class="badge-item">Collaboration</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="slide-right">
+                <span class="title-bracket">[</span>CONTACT<span class="title-bracket">]</span>
+            </h2>
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="info-card">
+                        <h3 class="info-title">LET'S CONNECT</h3>
+                        <p class="info-desc">
+                            Interested in collaborating or have a project in mind? 
+                            Drop me a message and let's build something amazing together.
+                        </p>
+
+                        <div class="social-links">
+                            <a href="https://github.com/A3zooz" target="_blank" class="social-btn">
+                                <span>GITHUB</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ahmed-azoozz/" target="_blank" class="social-btn">
+                                <span>LINKEDIN</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <form
+                action="https://formspree.io/f/mnnogklg"
+                method="POST"
+                class="contact-form" onsubmit="handleSubmit(event)" data-aos="fade-left">
+                    <div class="form-group">
+                        <label class="form-label">NAME</label>
+                        <input type="text" class="form-input" name="name" required>
+                        <div class="input-border"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">EMAIL</label>
+                        <input type="email" class="form-input" name="email" required>
+                        <div class="input-border"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">MESSAGE</label>
+                        <textarea class="form-input form-textarea" name="message" rows="6" required></textarea>
+                        <div class="input-border"></div>
+                    </div>
+                    <input type="hidden" name="_subject" value="New contact from portfolio!">
+                    <button type="submit" class="btn-submit">
+                        <span>SEND MESSAGE</span>
+                        <span class="submit-arrow">→</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">AHMED_AZOOZ</div>
+                    <div class="footer-text">© 2025 • Built with vanilla JS</div>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/A3zooz" target="_blank" class="footer-link">GITHUB</a>
+                    <a href="https://www.linkedin.com/in/ahmed-azoozz/" target="_blank" class="footer-link">LINKEDIN</a>
+                </div>
+            </div>
+            <div class="scroll-to-top" id="scrollTop">
+                <span>↑</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

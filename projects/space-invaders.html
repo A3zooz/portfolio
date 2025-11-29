@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders - Ahmed Azooz</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="project-detail.css">
+</head>
+<body>
+    <nav class="nav-brutalist">
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='../index.html'">AHMED_AZOOZ</div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link" data-text="HOME">HOME</a>
+                <a href="../index.html#projects" class="nav-link" data-text="PROJECTS">PROJECTS</a>
+                <a href="../index.html#contact" class="nav-link" data-text="CONTACT">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-detail">
+        <div class="container">
+            <div class="project-header">
+                <div class="project-category">GAME DEVELOPMENT • GRAPHICS</div>
+                <h1 class="project-detail-title">SPACE INVADERS</h1>
+                <p class="project-tagline">Classic arcade game reimplemented using OpenGL 2D graphics</p>
+            </div>
+
+            <div class="project-preview">
+                <img src="../images/spaceinvaders.gif" alt="Space Invaders Gameplay" style="width: 100%; max-width: 800px; border-radius: 8px; border: 4px solid #222222;">
+            </div>
+
+            <div class="project-content">
+                <div class="content-section">
+                    <h2 class="section-heading">
+                        <span class="bracket">[</span>OVERVIEW<span class="bracket">]</span>
+                    </h2>
+                    <p>A faithful recreation of the classic Space Invaders arcade game using OpenGL for 2D graphics rendering. This project demonstrates fundamental game development concepts including sprite rendering, collision detection, game state management, and real-time user input handling.</p>
+                    <p>Built without game engines, the implementation showcases low-level graphics programming and classic arcade game mechanics, providing an authentic retro gaming experience.</p>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading">
+                        <span class="bracket">[</span>KEY_FEATURES<span class="bracket">]</span>
+                    </h2>
+                    <ul class="feature-list">
+                        <li><strong>OpenGL 2D Rendering:</strong> Custom sprite and shape rendering system</li>
+                        <li><strong>Classic Gameplay:</strong> Authentic Space Invaders mechanics</li>
+                        <li><strong>Collision Detection:</strong> Projectile and enemy interaction system</li>
+                        <li><strong>Progressive Difficulty:</strong> Increasing speed as enemies are defeated</li>
+                        <li><strong>Score Tracking:</strong> Real-time score display and high score system</li>
+                        <li><strong>Sound Effects:</strong> Classic arcade sound implementation</li>
+                        <li><strong>Player Controls:</strong> Smooth keyboard input handling</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading">
+                        <span class="bracket">[</span>TECH_STACK<span class="bracket">]</span>
+                    </h2>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-name">OpenGL</div>
+                            <div class="tech-desc">2D graphics rendering</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-name">C/C++</div>
+                            <div class="tech-desc">Core game logic</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-name">Game Development</div>
+                            <div class="tech-desc">Arcade game mechanics</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-name">Computer Graphics</div>
+                            <div class="tech-desc">Sprite rendering and animation</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading">
+                        <span class="bracket">[</span>IMPLEMENTATION_DETAILS<span class="bracket">]</span>
+                    </h2>
+                    <div class="challenge-item">
+                        <h3>2D Graphics Pipeline</h3>
+                        <p>Implemented a complete 2D rendering system using OpenGL, handling sprite positioning, scaling, and animation frames for all game entities including the player ship, enemy invaders, and projectiles.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>Game State Management</h3>
+                        <p>Developed a robust state machine managing game states (menu, playing, paused, game over) with proper transitions and state-specific rendering and input handling.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>Collision System</h3>
+                        <p>Created an efficient bounding box collision detection system for handling interactions between player bullets, enemy projectiles, shields, and invaders with pixel-perfect accuracy.</p>
+                    </div>
+                </div>
+
+                <div class="project-links-section">
+                    <a href="https://github.com/A3zooz/space-invaders" target="_blank" class="project-btn">
+                        <span>VIEW ON GITHUB</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+                    <a href="../index.html#projects" class="project-btn btn-secondary">
+                        <span>BACK TO PROJECTS</span>
+                        <span class="btn-arrow">←</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">AHMED_AZOOZ</div>
+                    <div class="footer-text">© 2025 • Built with vanilla JS</div>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/A3zooz" target="_blank" class="footer-link">GITHUB</a>
+                    <a href="https://www.linkedin.com/in/ahmed-azoozz/" target="_blank" class="footer-link">LINKEDIN</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0E4C92"/>
+  
+  <!-- Road/Track -->
+  <polygon points="100,300 150,100 250,100 300,300" fill="#222222"/>
+  
+  <!-- Lane Lines -->
+  <rect x="190" y="120" width="20" height="30" fill="#FFFFFF"/>
+  <rect x="190" y="170" width="20" height="30" fill="#FFFFFF"/>
+  <rect x="190" y="220" width="20" height="30" fill="#FFFFFF"/>
+  
+  <!-- Obstacles -->
+  <rect x="160" y="140" width="25" height="25" fill="#FF4F00" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="245" cy="190" r="15" fill="#FF4F00" stroke="#FFFFFF" stroke-width="2"/>
+  
+  <!-- Runner Character (simplified) -->
+  <g transform="translate(190, 240)">
+    <!-- Head -->
+    <circle cx="10" cy="0" r="8" fill="#FFD700"/>
+    <!-- Body -->
+    <rect x="5" y="8" width="10" height="20" fill="#FF4F00"/>
+    <!-- Left Leg -->
+    <rect x="4" y="28" width="5" height="15" fill="#222222"/>
+    <!-- Right Leg -->
+    <rect x="11" y="28" width="5" height="15" fill="#222222"/>
+    <!-- Left Arm -->
+    <rect x="0" y="12" width="5" height="12" fill="#FFD700"/>
+    <!-- Right Arm -->
+    <rect x="15" y="12" width="5" height="12" fill="#FFD700"/>
+  </g>
+  
+  <!-- Coins -->
+  <circle cx="130" cy="180" r="6" fill="#FFD700" stroke="#FFFFFF" stroke-width="1"/>
+  <circle cx="200" cy="160" r="6" fill="#FFD700" stroke="#FFFFFF" stroke-width="1"/>
+  <circle cx="270" cy="200" r="6" fill="#FFD700" stroke="#FFFFFF" stroke-width="1"/>
+  
+  <!-- Title -->
+  <text x="200" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">WHAT IS THIS GAME</text>
+  <text x="200" y="65" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Unity • Endless Runner</text>
+  
+  <!-- Bottom Label -->
+  <rect x="150" y="270" width="100" height="20" fill="#FF4F00"/>
+  <text x="200" y="284" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">UNITY GAME</text>
+</svg>
