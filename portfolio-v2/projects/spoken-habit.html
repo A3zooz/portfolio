@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoken Habit - Ahmed Azooz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="project-detail.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">AHMED<span class="accent">_</span>AZOOZ</a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">HOME</a>
+                <a href="../index.html#projects" class="nav-link">PROJECTS</a>
+                <a href="../index.html#contact" class="nav-link">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <span class="project-category">MOBILE</span>
+                <h1 class="project-detail-title">SPOKEN HABIT</h1>
+                <p class="project-tagline">Voice-powered habit tracker with hands-free management using LLMs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Preview -->
+    <section class="project-preview">
+        <div class="container">
+            <div class="project-preview-wrapper">
+                <img src="../../images/spokenhabit.gif" alt="Spoken Habit App" style="max-width: 400px; margin: 0 auto;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-section">
+                    <h2 class="section-heading">
+                        <span class="bracket">[</span>OVERVIEW<span class="bracket">]</span>
+                    </h2>
+                    <p>Spoken Habit is a cross-platform voice-powered habit tracker built with React Native, Expo Router, and Supabase. The app enables completely hands-free habit and task management through voice commands, making it perfect for busy individuals who want to maintain consistency without interrupting their workflow.</p>
+                    <p>The app integrates real-time synchronization and authentication with Supabase, supporting secure multi-device usage with instant updates. AI-driven voice command parsing via Groq and Supabase Edge Functions allows users to add and complete habits/tasks simply by speaking.</p>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading">
+                        <span class="bracket">[</span>KEY_FEATURES<span class="bracket">]</span>
+                    </h2>
+                    <ul class="feature-list">
+                        <li><strong>Voice Recognition:</strong> AI-powered voice command parsing via Groq for natural interaction</li>
+                        <li><strong>Hands-free Operation:</strong> Complete voice control for adding and completing habits/tasks</li>
+                        <li><strong>Real-time Sync:</strong> Supabase backend with instant multi-device synchronization</li>
+                        <li><strong>Secure Authentication:</strong> Supabase authentication for multi-user support</li>
+                        <li><strong>Cross-platform:</strong> Built with React Native and Expo for iOS and Android</li>
+                        <li><strong>Edge Functions:</strong> Serverless AI processing with Supabase Edge Functions</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading">
+                        <span class="bracket">[</span>TECH_STACK<span class="bracket">]</span>
+                    </h2>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-name">React Native</div>
+                            <div class="tech-desc">Cross-platform mobile development</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-name">Supabase/PostgreSQL</div>
+                            <div class="tech-desc">Backend, authentication & real-time sync</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-name">Groq AI</div>
+                            <div class="tech-desc">Voice command parsing and understanding</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-name">Expo & Expo Router</div>
+                            <div class="tech-desc">Development platform & navigation</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-heading">
+                        <span class="bracket">[</span>CHALLENGES_&_SOLUTIONS<span class="bracket">]</span>
+                    </h2>
+                    <div class="challenge-item">
+                        <h3>Token Usage Optimization</h3>
+                        <p>Optimized API calls by sending transcripts of the user's voice using the speech recognition of the user's phone instead of sending raw audio data.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>Offline Functionality</h3>
+                        <p>Developed a robust local storage system with background sync to ensure the app works seamlessly even without internet connectivity.</p>
+                    </div>
+                </div>
+
+                <div class="project-links-section">
+                    <a href="https://github.com/A3zooz/spoken-habit" target="_blank" class="project-btn">
+                        <span>VIEW ON GITHUB</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+                    <a href="../index.html#projects" class="project-btn btn-secondary">
+                        <span>BACK TO PROJECTS</span>
+                        <span class="btn-arrow">←</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <span class="footer-logo">AHMED<span class="accent">_</span>AZOOZ</span>
+                    <span class="footer-copy">2025</span>
+                </div>
+                <div class="footer-right">
+                    <a href="https://github.com/A3zooz" target="_blank" class="footer-link">GITHUB</a>
+                    <a href="https://www.linkedin.com/in/ahmed-azoozz/" target="_blank" class="footer-link">LINKEDIN</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
